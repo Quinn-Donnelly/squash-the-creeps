@@ -13,3 +13,8 @@ func _on_mob_timer_timeout() -> void:
 	
 	mob.initalize(spawnLocation, playerLocation)
 	add_child(mob)
+
+
+func _on_player_hit() -> void:
+	$MobTimer.stop()
+	print("get shit on")

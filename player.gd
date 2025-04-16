@@ -7,6 +7,8 @@ extends CharacterBody3D
 @export var bounce_impluse = 16
 var target_velocity = Vector3.ZERO
 
+signal hit
+
 func _physics_process(delta: float) -> void:
 	var direction = Vector3.ZERO
 	if Input.is_action_pressed("move_left"):
@@ -45,3 +47,10 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = target_velocity
 	move_and_slide()
+
+func die():
+	hit.emit()
+	queue_free()
+
+func _on_mob_hitbox_body_entered(body: Node3D) -> void:
+	die()
