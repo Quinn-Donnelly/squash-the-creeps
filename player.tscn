@@ -15,5 +15,5 @@ script = ExtResource("1_onrkg")
 [node name="player" parent="pivot" instance=ExtResource("1_4flbx")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.056532, 0.83476, -0.0445489)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.056532, 0.717025, -0.0445489)
 shape = SubResource("SphereShape3D_onrkg")
