@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dsaagt26rjpv6"]
+
+[ext_resource type="FontFile" uid="uid://bp0q3sbq5yevq" path="res://fonts/Montserrat-Medium.ttf" id="1_amlv4"]
+
+[resource]
+default_font = ExtResource("1_amlv4")
+default_font_size = 22

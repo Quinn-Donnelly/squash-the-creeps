@@ -3,7 +3,7 @@ extends CharacterBody3D
 @export var min_speed = 10
 @export var max_speed = 18
 
-signal squahsed
+signal squashed
 
 func initalize(start_position, player_position) -> void:
 	look_at_from_position(start_position, player_position, Vector3.UP)
@@ -19,5 +19,5 @@ func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
 	queue_free()
 
 func squash():
-	squahsed.emit()
+	squashed.emit()
 	queue_free()

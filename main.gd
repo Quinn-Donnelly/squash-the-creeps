@@ -12,6 +12,7 @@ func _on_mob_timer_timeout() -> void:
 	var playerLocation = $player.position
 	
 	mob.initalize(spawnLocation, playerLocation)
+	mob.squashed.connect($UserInterface/ScoreLabel._on_mob_squahsed.bind())
 	add_child(mob)
 
 
