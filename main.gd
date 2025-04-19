@@ -19,4 +19,3 @@ func _on_mob_timer_timeout() -> void:
 func _on_player_hit() -> void:
 	$MobTimer.stop()
 	$UserInterface/Retry.show()
-	print("get shit on")

@@ -8,8 +8,10 @@ signal squashed
 func initalize(start_position, player_position) -> void:
 	look_at_from_position(start_position, player_position, Vector3.UP)
 	rotate_y(randf_range(-PI/4, PI/4))
-	velocity = randi_range(min_speed, max_speed) * Vector3.FORWARD
+	var random_speed = randi_range(min_speed, max_speed)
+	velocity = random_speed * Vector3.FORWARD
 	velocity =  velocity.rotated(Vector3.UP ,rotation.y)
+	$AnimationPlayer.speed_scale = random_speed / min_speed
 	
 func _physics_process(delta: float) -> void:
 	move_and_slide()
